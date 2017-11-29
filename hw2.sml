@@ -95,9 +95,10 @@ fun remove_card (cs, c, e) =
   end
         
 fun all_same_color (cs) =
-  let val color = case cs of 
-                      [] => Black
-                    | c::cs' => card_color (c) 
+  let val color = 
+          case cs of 
+              [] => Black
+            | c::cs' => card_color (c) 
   in
       let fun helper (color, cs) =
             case cs of
